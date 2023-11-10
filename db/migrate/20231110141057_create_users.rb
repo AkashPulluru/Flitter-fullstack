@@ -15,5 +15,6 @@ class CreateUsers < ActiveRecord::Migration[7.1]
 
       add_index :users, :username
       add_index :users, :email
-  end
+    end 
 end
+

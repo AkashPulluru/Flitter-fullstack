@@ -1,18 +1,22 @@
 class SessionsController < ApplicationController
+
+    before_action :require_logged_in
+
+    def require_logged_in
+        redirect_to new_session_url unless current_user
+    end
+
     def create
         @user = User.find_by_credentials(params[:email], params[:password])
         if @user
           session[:session_token] = @user.reset_session_token!
-          # Redirect to user's homepage or dashboard
         else
-          # Render login page with error message
         end
       end
     
       def destroy
         current_user.reset_session_token! if current_user
         session[:session_token] = nil
-        # Redirect to login page or home page
       end
     
       private
