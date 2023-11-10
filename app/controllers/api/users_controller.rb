@@ -1,7 +1,7 @@
 class Api::UsersController < ApplicationController
     # before_action :set_user, only: [:show, :update, :destroy ]
 
-    wrap_parameters include: User.attribute_names + ['password']
+  wrap_parameters include: User.attribute_names + ['password']
 
   # GET /users
   # GET /users.json
@@ -21,17 +21,19 @@ class Api::UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    # render json: user_params
     @user = User.new(user_params)
 
     if @user.save
         #success
         login!(@user)
-        render json: @user 
+        puts "worked"
         # redirect_to users_url
     else
         #failure
-        flash.now[:errors] = @user.errors.full_messages
-        render :new
+        # flash.now[:errors] = @user.errors.full_messages
+        puts "failed"
+        render json: @user
     end
   end
 
