@@ -1,10 +1,14 @@
-<%= form_for @user, url: users_path do |f| %>
-  
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+<h1>Sign Up</h1>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+<form method="POST" action=<%= users_url %>>
+    <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %>>
 
-  <%= f.submit "Sign Up" %>
-<% end %>
+    <label>Email
+        <input type="text" name="user[username]" value=<%= @user.username %>>
+    </label>
+    <label>Password
+        <input type="password" name="user[password]">
+    </label>
+
+    <input type="submit" value="Sign Up">
+</form>

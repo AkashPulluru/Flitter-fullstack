@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
     helper_method :current_user, :logged_in?
+    before_action :snake_case_params
 
-    private
   
     def current_user
       @current_user ||= User.find_by(session_token: session[:session_token])
@@ -28,5 +28,12 @@ class ApplicationController < ActionController::Base
     def logged_in?
       !!current_user
     end
+
+    private
+
+    def snake_case_params
+      params.deep_transform_keys!(&:underscore)
+    end
+
 
 end

@@ -12,7 +12,6 @@ class User < ApplicationRecord
     has_many :followings
     has_many :followers
 
-
     before_validation :ensure_session_token
 
     attr_reader :password
@@ -34,14 +33,11 @@ class User < ApplicationRecord
   end
 
   def self.find_by_credentials(email, password)
-    user = User.find_by(username: username)
+    user = User.find_by(email: email)
 
-        # user && user.is_password?(password) ? user : nil
         if user && user.is_password?(password)
-            #success
             return user
         else
-            #failure
             return nil
     end
   end
