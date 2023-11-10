@@ -1,28 +1,29 @@
 class SessionsController < ApplicationController
 
-    before_action :require_logged_in
+    before_action :require_logged_in, only: [:destroy]
 
-    def require_logged_in
-        redirect_to new_session_url unless current_user
+    def new
+        @user = User.new
+        render :new
     end
 
     def create
-        @user = User.find_by_credentials(params[:email], params[:password])
-        if @user
-          session[:session_token] = @user.reset_session_token!
-        else
-        end
+      @user = User.find_by_credentials(params[:user][:username], params[:user][:password])
+
+      if @user
+          login!(@user)
+          redirect_to users_url
+      else
+          @user = User.new(username: params[:user][:username])
+          flash.now[:errors] = ["Invalid username or password"]
+          render :new
       end
+    end
+
+  
+    def destroy
+      logout!()
+      redirect_to new_session_url
+    end
     
-      def destroy
-        current_user.reset_session_token! if current_user
-        session[:session_token] = nil
-      end
-    
-      private
-    
-      def current_user
-        return nil unless session[:session_token]
-        @current_user ||= User.find_by(session_token: session[:session_token])
-      end
 end

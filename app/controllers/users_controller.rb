@@ -5,11 +5,15 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+    render :index 
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    @user = User.find_by(id: params[:id])
+    @goal = Goal.new
+    render :show
   end
 
   # POST /users
@@ -18,9 +22,13 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      render :show, status: :created, location: @user
+        #success
+        login!(@user)
+        redirect_to users_url
     else
-      render json: @user.errors, status: :unprocessable_entity
+        #failure
+        flash.now[:errors] = @user.errors.full_messages
+        render :new
     end
   end
 
@@ -48,6 +56,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:username, :email, :password_digest, :full_name, :join_date, :bio, :website, :profile_picture, :session_token)
+      params.require(:user).permit(:email, :password_digest, :first_name, :last_name, :join_date, :bio, :website, :session_token)
     end
 end
