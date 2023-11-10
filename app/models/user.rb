@@ -1,4 +1,2 @@
-class User < ApplicationRecord 
-    has_many :
-
-end 
+class User < ApplicationRecord
+end
