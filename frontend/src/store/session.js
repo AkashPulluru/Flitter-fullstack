@@ -48,6 +48,16 @@ export const signup = ({ firstName, lastName, email, password }) => async (dispa
     dispatch(setUser(data.user));
     return response;
   };
+
+  export const logout = () => async (dispatch) => {
+    const response = await csrfFetch("/api/session", {
+      method: "DELETE"
+    });
+    if (response.ok) {
+      dispatch(removeUser());
+    }
+    return response;
+  };
   
 
 
