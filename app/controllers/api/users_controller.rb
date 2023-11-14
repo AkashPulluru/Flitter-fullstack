@@ -14,7 +14,6 @@ class Api::UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find_by(id: params[:id])
-    @goal = Goal.new
     render :show
   end
 
@@ -27,8 +26,7 @@ class Api::UsersController < ApplicationController
     if @user.save
         #success
         login!(@user)
-        puts "worked"
-        # redirect_to users_url
+        render :show
     else
         #failure
         # flash.now[:errors] = @user.errors.full_messages
