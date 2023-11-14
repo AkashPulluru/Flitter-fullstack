@@ -18,7 +18,9 @@ class User < ApplicationRecord
     attr_reader :password
 
     def self.find_by_credentials(email, password)
+      debugger
       user = User.find_by(email: email)
+      debugger
         if user && user.is_password?(password)
           return user
         else
@@ -39,7 +41,6 @@ class User < ApplicationRecord
     def generate_session_token
       SecureRandom.urlsafe_base64
     end
-
     
     def password=(password)
       @password = password
