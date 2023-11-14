@@ -13,13 +13,13 @@ export const removeUser = () => ({
 });
 
 
-export const login = (credential, password) => async (dispatch) => {
+export const login = (email, password) => async (dispatch) => {
   const response = await csrfFetch('/api/session', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ credential, password }),
+    body: JSON.stringify({ email, password }),
   });
 
   if (response.ok) {

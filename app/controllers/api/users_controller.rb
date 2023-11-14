@@ -1,7 +1,7 @@
 class Api::UsersController < ApplicationController
     # before_action :set_user, only: [:show, :update, :destroy ]
 
-  wrap_parameters include: User.attribute_names + ['password']
+  # wrap_parameters include: User.attribute_names + ['password']
 
   # GET /users
   # GET /users.json
@@ -22,7 +22,7 @@ class Api::UsersController < ApplicationController
   def create
     # render json: user_params
     debugger
-    @user = User.new(user_params)S
+    @user = User.new(user_params)
     debugger
 
     if @user.save
@@ -31,7 +31,7 @@ class Api::UsersController < ApplicationController
         render :show
     else
         #failure
-        # flash.now[:errors] = @user.errors.full_messages
+        # flash.now[:errors] = @user.errors.full_messagesS
         puts "failed"
         render json: @user
     end
