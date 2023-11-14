@@ -21,9 +21,9 @@ class Api::UsersController < ApplicationController
   # POST /users.json
   def create
     # render json: user_params
-    debugger
+  
     @user = User.new(user_params)
-    debugger
+    
 
     if @user.save
         #success

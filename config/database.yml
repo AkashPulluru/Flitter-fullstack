@@ -79,6 +79,4 @@ test:
 #
 production:
   <<: *default
-  database: flitter_fullstack_production
-  username: flitter_fullstack
-  password: <%= ENV["FLITTER_FULLSTACK_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>

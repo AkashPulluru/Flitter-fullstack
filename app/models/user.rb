@@ -18,9 +18,9 @@ class User < ApplicationRecord
     attr_reader :password
 
     def self.find_by_credentials(email, password)
-      debugger
+      # debugger
       user = User.find_by(email: email)
-      debugger
+      # debugger
         if user && user.is_password?(password)
           return user
         else
