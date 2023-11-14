@@ -21,7 +21,9 @@ class Api::UsersController < ApplicationController
   # POST /users.json
   def create
     # render json: user_params
-    @user = User.new(user_params)
+    debugger
+    @user = User.new(user_params)S
+    debugger
 
     if @user.save
         #success
@@ -34,16 +36,6 @@ class Api::UsersController < ApplicationController
         render json: @user
     end
   end
-
-  # PATCH/PUT /users/1
-  # PATCH/PUT /users/1.json
-  # def update
-  #   if @user.update(user_params)
-  #     render :show, status: :ok, location: @user
-  #   else
-  #     render json: @user.errors, status: :unprocessable_entity
-  #   end
-  # end
 
   # DELETE /users/1
   # DELETE /users/1.json
@@ -59,6 +51,17 @@ class Api::UsersController < ApplicationController
     # Only allow a list of trusted parameters through.
 
     def user_params
-      params.require(:user).permit(:email, :password_digest, :first_name, :last_name, :join_date, :bio, :website, :session_token)
+      params.require(:user).permit(:email, :password, :first_name, :last_name, :join_date, :bio, :website, :session_token)
     end
 end
+
+
+  # PATCH/PUT /users/1
+  # PATCH/PUT /users/1.json
+  # def update
+  #   if @user.update(user_params)S
+  #     render :show, status: :ok, location: @user
+  #   else
+  #     render json: @user.errors, status: :unprocessable_entity
+  #   end
+  # end
