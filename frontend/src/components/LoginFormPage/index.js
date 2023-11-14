@@ -25,14 +25,14 @@ function LoginFormPage() {
 
   return (
     <>
-      <div className="header">Flittr</div>
-      <form onSubmit={handleSubmit}>
-        <div className="form-title">Log in to Flittr</div>
+      <div className="header">
+      <div className="header-logo">Flittr</div>
+    </div>
+      <form onSubmit={handleSubmit} className="form">
+          <div className="form-title">Log in to Flittr</div>
         <ul>
           {errors.map((error, idx) => <li key={idx}>{error}</li>)}
         </ul>
-        <label>
-          Email
           <input
             type="text"
             value={email}
@@ -40,9 +40,6 @@ function LoginFormPage() {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-        </label>
-        <label>
-          Password
           <input
             type="password"
             value={password}
@@ -50,7 +47,6 @@ function LoginFormPage() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-        </label>
         <button type="submit">Log In</button>
       </form>
     </>
