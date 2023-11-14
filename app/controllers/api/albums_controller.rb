@@ -1,4 +1,4 @@
-class AlbumsController < ApplicationController
+class Api::AlbumsController < ApplicationController
     before_action :set_album, only: [:show, :update, :destroy]
   
     # GET /api/albums/:id

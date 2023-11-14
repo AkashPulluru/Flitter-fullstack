@@ -1,12 +1,11 @@
 class CreatePhotos < ActiveRecord::Migration[7.1]
   def change
-    create_table :photos do |t|
-      t.primary_key :PhotoID
-      t.integer :UserID
-      t.string :Title
-      t.string :Description
-      t.datetime :UploadDate
-      t.string :URL
+    create_table :photos, id: :primary_key do |t|
+      t.references :user, null: false, foreign_key: true, index: true
+      t.string :title, null: false
+      t.string :description
+      t.datetime :upload_date, null: false
+      t.string :url, null: false
 
       t.timestamps
     end

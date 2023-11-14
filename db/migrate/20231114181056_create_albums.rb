@@ -1,11 +1,10 @@
 class CreateAlbums < ActiveRecord::Migration[7.1]
   def change
-    create_table :albums do |t|
-      t.primary_key :AlbumID
-      t.integer :UserID
-      t.string :Title
-      t.string :Description
-      t.date :CreationDate
+    create_table :albums, id: :primary_key do |t|
+      t.references :user, null: false, foreign_key: true, index: true
+      t.string :title, null: false
+      t.string :description
+      t.date :creation_date, null: false
 
       t.timestamps
     end
