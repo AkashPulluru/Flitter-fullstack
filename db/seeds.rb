@@ -81,6 +81,27 @@ User.create!(
   updated_at: Time.now
 )
 
+
+# db/seeds.rb
+
+
+user = User.first || User.create!(email: 'user15@example.com', password_digest: 'password', first_name: 'John', last_name: 'Doe', session_token: 'session1234')
+
+user1 = User.create!(email: "user1@example.com", password_digest: "password1", first_name: "John", last_name: "Doe", session_token: "token1")
+user2 = User.create!(email: "user2@example.com", password_digest: "password2", first_name: "Jane", last_name: "Doe", session_token: "token2")
+
+album1 = Album.create!(user_id: user1.id, title: "Album Title 1", description: "Album 1 Description", creation_date: Date.today)
+album2 = Album.create!(user_id: user1.id, title: "Album Title 2", description: "Album 2 Description", creation_date: Date.today)
+album3 = Album.create!(user_id: user2.id, title: "Album Title 3", description: "Album 3 Description", creation_date: Date.today)
+
+photo1_1 = Photo.create!(user_id: user1.id, title: "Photo Title 1-1", description: "Description 1-1", upload_date: DateTime.now, url: "http://example.com/photo1-1.jpg")
+photo1_2 = Photo.create!(user_id: user1.id, title: "Photo Title 1-2", description: "Description 1-2", upload_date: DateTime.now, url: "http://example.com/photo1-2.jpg")
+photo1_3 = Photo.create!(user_id: user1.id, title: "Photo Title 1-3", description: "Description 1-3", upload_date: DateTime.now, url: "http://example.com/photo1-3.jpg")
+
+AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_1.id)
+AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_2.id)
+AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_3.id)
+
 puts "Done!"
 end
 
