@@ -97,6 +97,13 @@ album3 = Album.create!(user_id: user2.id, title: "Album Title 3", description: "
 photo1_1 = Photo.create!(user_id: user1.id, title: "Photo Title 1-1", description: "Description 1-1", upload_date: DateTime.now, url: "http://example.com/photo1-1.jpg")
 photo1_2 = Photo.create!(user_id: user1.id, title: "Photo Title 1-2", description: "Description 1-2", upload_date: DateTime.now, url: "http://example.com/photo1-2.jpg")
 photo1_3 = Photo.create!(user_id: user1.id, title: "Photo Title 1-3", description: "Description 1-3", upload_date: DateTime.now, url: "http://example.com/photo1-3.jpg")
+photo1_4 = Photo.create!(user_id: user1.id, title: "Photo Title 1-4", description: "Description 1-4", upload_date: DateTime.now, url: "http://example.com/photo1-4.jpg")
+photo1_5 = Photo.create!(user_id: user2.id, title: "Photo Title 1-5", description: "Description 1-5", upload_date: DateTime.now, url: "http://example.com/photo1-5.jpg")
+photo1_6 = Photo.create!(user_id: user2.id, title: "Photo Title 1-6", description: "Description 1-6", upload_date: DateTime.now, url: "http://example.com/photo1-6.jpg")
+photo1_7 = Photo.create!(user_id: user2.id, title: "Photo Title 1-7", description: "Description 1-7", upload_date: DateTime.now, url: "http://example.com/photo1-7.jpg")
+photo1_8 = Photo.create!(user_id: user2.id, title: "Photo Title 1-8", description: "Description 1-8", upload_date: DateTime.now, url: "http://example.com/photo1-8.jpg")
+photo1_9 = Photo.create!(user_id: user2.id, title: "Photo Title 1-9", description: "Description 1-9", upload_date: DateTime.now, url: "http://example.com/photo1-9.jpg")
+
 
 AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_1.id)
 AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_2.id)
