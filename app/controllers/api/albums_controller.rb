@@ -5,6 +5,11 @@ class Api::AlbumsController < ApplicationController
     def show
       render json: @album
     end
+
+    def index
+      @albums = Album.where(user_id: params[:user_id])
+      render json: @albums
+    end
   
     # POST /api/albums
     def create

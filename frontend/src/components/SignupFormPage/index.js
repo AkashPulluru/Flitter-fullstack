@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
-import * as sessionActions from "../../store/session";
+import React, { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Redirect, useHistory } from 'react-router-dom';
+import * as sessionActions from '../../store/session';
 import "./SignupForm.css";
 
 function SignupFormPage() {
   const dispatch = useDispatch();
+  const history = useHistory(); 
   const sessionUser = useSelector(state => state.session.user);
   const [credentials, setCredentials] = useState({
     firstName: "",
@@ -15,22 +16,40 @@ function SignupFormPage() {
   });
   const [errors, setErrors] = useState([]);
 
-  if (sessionUser) return <Redirect to="/" />;
+  useEffect(() => {
+    if (sessionUser) history.push('/photos'); 
+  }, [sessionUser, history]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setCredentials({ ...credentials, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setErrors([]);
-    dispatch(sessionActions.signup(credentials))
+  const validatePassword = (password) => {
+    let errors = [];
+
+    if (password.length < 3 || password.length > 20) {
+        errors.push("Password must be between 3 and 20 characters.");
+    }
+
+    return errors;
+};
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+  const passwordErrors = validatePassword(credentials.password);
+  if (passwordErrors.length > 0) {
+      setErrors(passwordErrors);
+      return;
+  }
+
+  setErrors([]);
+  dispatch(sessionActions.signup(credentials))
       .catch(async (res) => {
-        const data = await res.json();
-        if (data && data.errors) setErrors(data.errors);
+          const data = await res.json();
+          if (data && data.errors) setErrors(data.errors);
       });
-  };
+};
 
   return (
     <>

@@ -3,5 +3,5 @@ class Photo < ApplicationRecord
         has_many :album_photos, foreign_key: "PhotoID"
         has_many :albums, through: :album_photos
       
-        validates :Title, :URL, presence: true
+        validates :title, :URL, presence: true
 end

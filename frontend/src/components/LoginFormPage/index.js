@@ -1,17 +1,20 @@
-import React, { useState } from 'react';
-import * as sessionActions from '../../store/session';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect } from 'react-router-dom';
+import { Redirect, useHistory } from 'react-router-dom';
+import * as sessionActions from '../../store/session';
 import './LoginForm.css';
 
 function LoginFormPage() {
   const dispatch = useDispatch();
+  const history = useHistory(); 
   const sessionUser = useSelector(state => state.session.user);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState([]);
 
-  if (sessionUser) return <Redirect to={`/users/${sessionUser.id}`} />;
+  useEffect(() => {
+    if (sessionUser) history.push('/photos'); 
+  }, [sessionUser, history]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -5,6 +5,12 @@ class Api::PhotosController < ApplicationController
     def show
       render json: @photo
     end
+
+    def index
+      @photos = Photo.where(user_id: params[:user_id])
+      render json: @photos
+    end
+    
   
     # POST /api/photos
     def create

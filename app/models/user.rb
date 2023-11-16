@@ -3,6 +3,7 @@ class User < ApplicationRecord
     validates :email, :password_digest,  presence: true
     validates :email, :password_digest, uniqueness: true
     validates :email, format: { with: URI::MailTo::EMAIL_REGEXP }
+    # validates :password, length: { in: 3..20 }
 
     has_secure_password
   
