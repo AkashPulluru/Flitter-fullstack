@@ -13,7 +13,12 @@ const LogoutButton = () => {
   };
 
   return (
-    <button onClick={handleLogout} className="logout-btn">Logout</button>
+    <div className="dropdown">
+      <img src="./assets/camera.png"  className="dropdown-icon"/>
+      <div className="dropdown-content">
+        <button onClick={handleLogout} className="logout-btn">Logout</button>
+      </div>
+    </div>
   );
 };
 
