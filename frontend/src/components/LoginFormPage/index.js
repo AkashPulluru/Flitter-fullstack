@@ -26,11 +26,19 @@ function LoginFormPage() {
       });
   }
 
+  const handleDemoLogin = () => {
+    dispatch(sessionActions.login('user1@example.com', 'password1'))
+      .catch(async (res) => {
+        const data = await res.json();
+        if (data && data.errors) setErrors(data.errors);
+      });
+  }
+
   return (
     <>
       <div className="header">
-      <div className="header-logo">Flittr</div>
-    </div>
+        <div className="header-logo">Flittr</div>
+      </div>
       <form onSubmit={handleSubmit} className="form">
           <div className="form-title">Log in to Flittr</div>
         <ul>
@@ -50,7 +58,8 @@ function LoginFormPage() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-        <button type="submit">Log In</button>
+         <button type="submit">Log In</button>
+         <button onClick={handleDemoLogin} type="button" className="demo-user">Demo User</button>
       </form>
     </>
   );
