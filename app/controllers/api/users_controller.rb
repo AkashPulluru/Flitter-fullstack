@@ -22,6 +22,11 @@ class Api::UsersController < ApplicationController
   def create
     # render json: user_params
   
+
+
+
+
+    
     @user = User.new(user_params)
     
 
@@ -51,7 +56,7 @@ class Api::UsersController < ApplicationController
     # Only allow a list of trusted parameters through.
 
     def user_params
-      params.require(:user).permit(:email, :password, :first_name, :last_name, :join_date, :bio, :website, :session_token)
+      params.require(:user).permit(:email, :password, :first_name, :last_name, :bio, :website, :session_token)
     end
 end
 

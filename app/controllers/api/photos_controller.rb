@@ -3,12 +3,18 @@ class Api::PhotosController < ApplicationController
   
     # GET /api/photos/:id
     def show
-      render json: @photo
+      @photo = Photo.find(params[:id])
+      render :show
     end
-
+    
     def index
-      @photos = Photo.where(user_id: params[:user_id])
-      render json: @photos
+      # debugger
+      if params[:user_id]
+        @photos = Photo.where(user_id: params[:user_id])
+      else
+        @photos = Photo.all
+      end
+      render :index
     end
     
   
@@ -44,7 +50,7 @@ class Api::PhotosController < ApplicationController
     end
   
     def photo_params
-      params.require(:photo).permit(:UserID, :Title, :Description, :UploadDate, :URL)
+      params.require(:photo).permit(:user_id, :title, :description,  :url)
     end
   end
   

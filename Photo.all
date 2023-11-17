@@ -1,0 +1,91 @@
+=> [[32m#<User:0x00007f7508e15c10[0m
+  id: [1;34m5[0m,
+  email: [31m[1;31m"[0m[31muser5@example.com[1;31m"[0m[31m[0m,
+  password_digest: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  first_name: [31m[1;31m"[0m[31mEva[1;31m"[0m[31m[0m,
+  last_name: [31m[1;31m"[0m[31mBrown[1;31m"[0m[31m[0m,
+  bio: [31m[1;31m"[0m[31mFull-stack developer[1;31m"[0m[31m[0m,
+  website: [31m[1;31m"[0m[31mhttps://www.example.com/user5[1;31m"[0m[31m[0m,
+  session_token: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  created_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m17[0m:[1;34m29[0m:[1;35m46.650521000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m20[0m:[1;34m44[0m:[1;35m32.237632000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<User:0x00007f7508e14d10[0m
+  id: [1;34m1[0m,
+  email: [31m[1;31m"[0m[31muser1@example.com[1;31m"[0m[31m[0m,
+  password_digest: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  first_name: [31m[1;31m"[0m[31mJohn[1;31m"[0m[31m[0m,
+  last_name: [31m[1;31m"[0m[31mDoe[1;31m"[0m[31m[0m,
+  bio: [31m[1;31m"[0m[31mI love coding![1;31m"[0m[31m[0m,
+  website: [31m[1;31m"[0m[31mhttps://www.example.com/user1[1;31m"[0m[31m[0m,
+  session_token: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  created_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m17[0m:[1;34m29[0m:[1;35m45.865464000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m17[0m:[1;34m29[0m:[1;35m45.865464000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<User:0x00007f7508e14ab8[0m
+  id: [1;34m2[0m,
+  email: [31m[1;31m"[0m[31muser2@example.com[1;31m"[0m[31m[0m,
+  password_digest: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  first_name: [31m[1;31m"[0m[31mJane[1;31m"[0m[31m[0m,
+  last_name: [31m[1;31m"[0m[31mSmith[1;31m"[0m[31m[0m,
+  bio: [31m[1;31m"[0m[31mWeb developer and designer[1;31m"[0m[31m[0m,
+  website: [31m[1;31m"[0m[31mhttps://www.example.com/user2[1;31m"[0m[31m[0m,
+  session_token: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  created_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m17[0m:[1;34m29[0m:[1;35m46.064156000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m17[0m:[1;34m29[0m:[1;35m46.064156000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<User:0x00007f7508e14860[0m
+  id: [1;34m4[0m,
+  email: [31m[1;31m"[0m[31muser4@example.com[1;31m"[0m[31m[0m,
+  password_digest: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  first_name: [31m[1;31m"[0m[31mBob[1;31m"[0m[31m[0m,
+  last_name: [31m[1;31m"[0m[31mWilliams[1;31m"[0m[31m[0m,
+  bio: [31m[1;31m"[0m[31mSoftware engineer[1;31m"[0m[31m[0m,
+  website: [31m[1;31m"[0m[31mhttps://www.example.com/user4[1;31m"[0m[31m[0m,
+  session_token: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  created_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m17[0m:[1;34m29[0m:[1;35m46.456813000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m17[0m:[1;34m29[0m:[1;35m46.456813000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<User:0x00007f7508e143b0[0m
+  id: [1;34m6[0m,
+  email: [31m[1;31m"[0m[31muser12@example.com[1;31m"[0m[31m[0m,
+  password_digest: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  first_name: [31m[1;31m"[0m[31mJohn[1;31m"[0m[31m[0m,
+  last_name: [31m[1;31m"[0m[31mDoe[1;31m"[0m[31m[0m,
+  bio: [1;36mnil[0m,
+  website: [1;36mnil[0m,
+  session_token: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  created_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m17[0m:[1;34m29[0m:[1;35m46.842701000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m17[0m:[1;34m29[0m:[1;35m46.842701000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<User:0x00007f7508e1bc28[0m
+  id: [1;34m7[0m,
+  email: [31m[1;31m"[0m[31muser23@example.com[1;31m"[0m[31m[0m,
+  password_digest: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  first_name: [31m[1;31m"[0m[31mJane[1;31m"[0m[31m[0m,
+  last_name: [31m[1;31m"[0m[31mDoe[1;31m"[0m[31m[0m,
+  bio: [1;36mnil[0m,
+  website: [1;36mnil[0m,
+  session_token: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  created_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m17[0m:[1;34m29[0m:[1;35m47.037967000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m17[0m:[1;34m29[0m:[1;35m47.037967000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m,
+ [32m#<User:0x00007f7508e1bb10[0m
+  id: [1;34m3[0m,
+  email: [31m[1;31m"[0m[31muser3@example.com[1;31m"[0m[31m[0m,
+  password_digest: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  first_name: [31m[1;31m"[0m[31mAlice[1;31m"[0m[31m[0m,
+  last_name: [31m[1;31m"[0m[31mJohnson[1;31m"[0m[31m[0m,
+  bio: [31m[1;31m"[0m[31mPassionate about technology[1;31m"[0m[31m[0m,
+  website: [31m[1;31m"[0m[31mhttps://www.example.com/user3[1;31m"[0m[31m[0m,
+  session_token: [31m[1;31m"[0m[31m[FILTERED][1;31m"[0m[31m[0m,
+  created_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m17[0m:[1;34m29[0m:[1;35m46.261174000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m,
+  updated_at:
+   [1;34;4mThu[0m, [1;34m16[0m [1;34;4mNov[0m [1;34m2023[0m [1;34m17[0m:[1;34m30[0m:[1;35m31.990888000[0m [1;34;4mUTC[0m [1;34m+00[0m:[1;34m00[0m[32m>[0m]

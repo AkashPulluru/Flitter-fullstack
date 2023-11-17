@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useSelector } from 'react-redux';
-import csrfFetch from '../../store/csrf'
+import { useSelector} from 'react-redux';
+import csrfFetch from '../../store/csrf';
 
 const PhotosComponent = () => {
   const [photos, setPhotos] = useState([]);    
@@ -9,24 +9,26 @@ const PhotosComponent = () => {
 
   useEffect(() => {
     if (user) {
-      fetchUserPhotos();
-      fetchUserAlbums();
+      debugger
+      fetchUserPhotos(user.id);
+      fetchUserAlbums(user.id);
     }
   }, [user]);
 
-  const fetchUserPhotos = async () => {
-    const response = await csrfFetch(`/api/photos?userId=${user.id}`);
+  const fetchUserPhotos = async (userId) => {
+    const response = await fetch(`/api/photos?user_id=${userId}`);
     if (response.ok) {
       const data = await response.json();
-      setPhotos(data);
+      setPhotos(data); 
     }
   };
 
-  const fetchUserAlbums = async () => {
-    const response = await csrfFetch(`/api/albums?userId=${user.id}`);
+  const fetchUserAlbums = async (userId) => {
+    debugger
+    const response = await csrfFetch(`/api/albums?userId=${userId}`);
     if (response.ok) {
-      const data = await response.json();
-      setAlbums(data);
+      const albums = await response.json();
+      setAlbums(albums);
     }
   };
 

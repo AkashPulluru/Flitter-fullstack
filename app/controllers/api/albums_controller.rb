@@ -3,12 +3,14 @@ class Api::AlbumsController < ApplicationController
   
     # GET /api/albums/:id
     def show
-      render json: @album
+      @album = Album.find(params[:id])
+      render :show
     end
-
+    
     def index
+      # debugger
       @albums = Album.where(user_id: params[:user_id])
-      render json: @albums
+      render :index
     end
   
     # POST /api/albums
@@ -43,7 +45,7 @@ class Api::AlbumsController < ApplicationController
     end
   
     def album_params
-      params.require(:album).permit(:UserID, :Title, :Description, :CreationDate)
+      params.require(:album).permit(:user_id, :title, :description)
     end
   end
   

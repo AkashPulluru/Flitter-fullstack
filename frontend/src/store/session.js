@@ -59,10 +59,6 @@ export const signup = ({ firstName, lastName, email, password }) => async (dispa
     return response;
   };
 
-  
-  
-
-
 const initialState = { user: null };
 
 const sessionReducer = (state = initialState, action) => {

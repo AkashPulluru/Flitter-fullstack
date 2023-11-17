@@ -7,8 +7,8 @@ class User < ApplicationRecord
 
     has_secure_password
   
-    has_many :photos
-    has_many :albums
+    has_many :photos, dependent: :destroy
+    has_many :albums, dependent: :destroy
     has_many :comments
     has_many :favorites
     has_many :followings

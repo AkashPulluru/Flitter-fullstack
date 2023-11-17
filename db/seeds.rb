@@ -22,84 +22,77 @@ ApplicationRecord.transaction do
 
 User.create!(
   email: 'user1@example.com',
-  password_digest: BCrypt::Password.create('password1'),
+  password: 'password1',
   first_name: 'John',
   last_name: 'Doe',
   bio: 'I love coding!',
-  website: 'https://www.example.com/user1',
-  session_token: SecureRandom.base64,
-  created_at: Time.now,
-  updated_at: Time.now
+  website: 'https://www.example.com/user1'
+
 )
 
 User.create!(
   email: 'user2@example.com',
-  password_digest: BCrypt::Password.create('password2'),
+  password: 'password2',
   first_name: 'Jane',
   last_name: 'Smith',
   bio: 'Web developer and designer',
-  website: 'https://www.example.com/user2',
-  session_token: SecureRandom.base64,
-  created_at: Time.now,
-  updated_at: Time.now
+  website: 'https://www.example.com/user2'
+
 )
 
 User.create!(
   email: 'user3@example.com',
-  password_digest: BCrypt::Password.create('password3'),
+  password: 'password3',
   first_name: 'Alice',
   last_name: 'Johnson',
   bio: 'Passionate about technology',
-  website: 'https://www.example.com/user3',
-  session_token: SecureRandom.base64,
-  created_at: Time.now,
-  updated_at: Time.now
+  website: 'https://www.example.com/user3'
+
 )
 
 User.create!(
   email: 'user4@example.com',
-  password_digest: BCrypt::Password.create('password4'),
+  password: 'password4',
   first_name: 'Bob',
   last_name: 'Williams',
   bio: 'Software engineer',
-  website: 'https://www.example.com/user4',
-  session_token: SecureRandom.base64,
-  created_at: Time.now,
-  updated_at: Time.now
+  website: 'https://www.example.com/user4'
+
 )
 
-User.create!(
-  
+user3 = User.create!(
   email: 'user5@example.com',
-  password_digest: BCrypt::Password.create('password5'),
+  password: 'password5',
   first_name: 'Eva',
   last_name: 'Brown',
   bio: 'Full-stack developer',
-  website: 'https://www.example.com/user5',
-  session_token: SecureRandom.base64,
-  created_at: Time.now,
-  updated_at: Time.now
+  website: 'https://www.example.com/user5'
+
 )
 
 
 
-user = User.first || User.create!(email: 'user15@example.com', password_digest: 'password', first_name: 'John', last_name: 'Doe', session_token: 'session1234')
+# user = User.first || User.create!(email: 'user15@example.com', password_digest: 'password', first_name: 'John', last_name: 'Doe', session_token: 'session1234')
 
-user1 = User.create!(email: "user12@example.com", password_digest: "password21", first_name: "John", last_name: "Doe", session_token: "token1")
-user2 = User.create!(email: "user23@example.com", password_digest: "password23", first_name: "Jane", last_name: "Doe", session_token: "token2")
+user1 = User.create!(email: "user12@example.com", password: "password21", first_name: "John", last_name: "Doe", session_token: "token1")
+user2 = User.create!(email: "user23@example.com", password: "password23", first_name: "Jane", last_name: "Doe", session_token: "token2")
 
-album1 = Album.create!(user_id: user1.id, title: "Album Title 1", description: "Album 1 Description", creation_date: Date.today)
-album2 = Album.create!(user_id: user1.id, title: "Album Title 2", description: "Album 2 Description", creation_date: Date.today)
-album3 = Album.create!(user_id: user2.id, title: "Album Title 3", description: "Album 3 Description", creation_date: Date.today)
+puts user1.id
+puts user2.id 
+# puts user2.All
 
-photo1_1 = Photo.create!(user_id: user1.id, title: "Photo Title 1-1", description: "Description 1-1", upload_date: DateTime.now, url: "../frontend/src/components/PhotosComponent/assets/fish.jpg")
-photo1_2 = Photo.create!(user_id: user1.id, title: "Photo Title 1-2", description: "Description 1-2", upload_date: DateTime.now, url: "../frontend/src/components/PhotosComponent/assets/car.jpg")
-photo1_3 = Photo.create!(user_id: user1.id, title: "Photo Title 1-3", description: "Description 1-3", upload_date: DateTime.now, url: "../frontend/src/components/PhotosComponent/assets/coffee.jpg")
-photo1_4 = Photo.create!(user_id: user1.id, title: "Photo Title 1-4", description: "Description 1-4", upload_date: DateTime.now, url: "../frontend/src/components/PhotosComponent/assets/gas-station.jpg")
-photo1_5 = Photo.create!(user_id: user2.id, title: "Photo Title 1-5", description: "Description 1-5", upload_date: DateTime.now, url: "../frontend/src/components/PhotosComponent/assets/man-on-rock.jpg")
-photo1_6 = Photo.create!(user_id: user2.id, title: "Photo Title 1-6", description: "Description 1-6", upload_date: DateTime.now, url: "../frontend/src/components/PhotosComponent/assets/path.jpg")
-photo1_7 = Photo.create!(user_id: user2.id, title: "Photo Title 1-7", description: "Description 1-7", upload_date: DateTime.now, url: "../frontend/src/components/PhotosComponent/assets/trees.jpg")
-photo1_8 = Photo.create!(user_id: user2.id, title: "Photo Title 1-8", description: "Description 1-8", upload_date: DateTime.now, url: "../frontend/src/components/PhotosComponent/assets/waterfalls.jpg")
+album1 = Album.create!(user_id: user3.id, title: "Album Title 1", description: "Album 1 Description")
+album2 = Album.create!(user_id: user3.id, title: "Album Title 2", description: "Album 2 Description")
+album3 = Album.create!(user_id: user3.id, title: "Album Title 3", description: "Album 3 Description")
+
+photo1_1 = Photo.create!(user_id: user1.id, title: "Photo Title 1-1", description: "Description 1-1", url: "../frontend/src/components/PhotosComponent/assets/fish.jpg")
+photo1_2 = Photo.create!(user_id: user1.id, title: "Photo Title 1-2", description: "Description 1-2", url: "../frontend/src/components/PhotosComponent/assets/car.jpg")
+photo1_3 = Photo.create!(user_id: user1.id, title: "Photo Title 1-3", description: "Description 1-3", url: "../frontend/src/components/PhotosComponent/assets/coffee.jpg")
+photo1_4 = Photo.create!(user_id: user1.id, title: "Photo Title 1-4", description: "Description 1-4", url: "../frontend/src/components/PhotosComponent/assets/gas-station.jpg")
+photo1_5 = Photo.create!(user_id: user2.id, title: "Photo Title 1-5", description: "Description 1-5", url: "../frontend/src/components/PhotosComponent/assets/man-on-rock.jpg")
+photo1_6 = Photo.create!(user_id: user3.id, title: "Photo Title 1-6", description: "Description 1-6", url: "../frontend/src/components/PhotosComponent/assets/path.jpg")
+photo1_7 = Photo.create!(user_id: user3.id, title: "Photo Title 1-7", description: "Description 1-7", url: "../frontend/src/components/PhotosComponent/assets/trees.jpg")
+photo1_8 = Photo.create!(user_id: user3.id, title: "Photo Title 1-8", description: "Description 1-8", url: "../frontend/src/components/PhotosComponent/assets/waterfalls.jpg")
 
 AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_1.id)
 AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_2.id)

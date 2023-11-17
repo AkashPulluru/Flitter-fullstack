@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Redirect, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import * as sessionActions from '../../store/session';
 import './LoginForm.css';
 
@@ -17,7 +17,7 @@ function LoginFormPage() {
   }, [sessionUser, history]);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); 
     setErrors([]);
     return dispatch(sessionActions.login(email, password))
       .catch(async (res) => {
@@ -65,4 +65,4 @@ function LoginFormPage() {
   );
 }
 
-export default LoginFormPage;
+export default LoginFormPage; 
