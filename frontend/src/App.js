@@ -5,6 +5,7 @@ import LoginFormPage from './components/LoginFormPage';
 import SignupFormPage from './components/SignupFormPage';
 import Navigation from './components/Navigation'; 
 import PhotosComponent from './components/PhotosComponent';
+import UserShowPage from './components/UserShowPage';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         <Route path="/signup">
           <SignupFormPage />
         </Route>
+        {/* <Route path="/users/:id"> */}
+        <Route path="/users/:id" component={UserShowPage} />
+        {/* </Route>  */}
         <Route path="/photos">
           <PhotosComponent />
         </Route>

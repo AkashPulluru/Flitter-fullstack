@@ -13,13 +13,19 @@ function LoginFormPage() {
   const [errors, setErrors] = useState([]);
 
   useEffect(() => {
-    if (sessionUser) history.push('/photos'); 
+    if (sessionUser) history.push(`/users/${sessionUser.id}`); 
   }, [sessionUser, history]);
+  
 
   const handleSubmit = (e) => {
     e.preventDefault(); 
     setErrors([]);
     return dispatch(sessionActions.login(email, password))
+      .then(user => {
+        if (user) {
+          history.push(`/users/${user.id}`); 
+        }
+      })
       .catch(async (res) => {
         const data = await res.json();
         if (data && data.errors) setErrors(data.errors);

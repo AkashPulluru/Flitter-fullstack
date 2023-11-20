@@ -24,7 +24,7 @@ const PhotosComponent = () => {
   };
 
   const fetchUserAlbums = async (userId) => {
-    debugger
+    // debugger
     const response = await csrfFetch(`/api/albums?userId=${userId}`);
     if (response.ok) {
       const albums = await response.json();
