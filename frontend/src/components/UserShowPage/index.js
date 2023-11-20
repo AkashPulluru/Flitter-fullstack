@@ -25,6 +25,7 @@ function UserShowPage() {
   })));
 
   const user = useSelector(state => state.session.user);
+  debugger
 
 
   return (
@@ -34,7 +35,8 @@ function UserShowPage() {
       </div>
       <div className="user-show-container">
         <div className="user-show-content">
-            <h1>{user}</h1>
+            <h1>Bio: {user.bio}</h1>
+            <h2>Photostream</h2>
           <div className="photo-gallery">
             {photos.map((photo) => (
               <div className="photo-container" key={photo.id}>

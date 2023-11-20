@@ -15,9 +15,9 @@ body, html {
   
   .photo-gallery {
     /* display: grid; */
-    gap: 20px;
-    padding: 20px; 
-    width: 100vw;
+    gap: 30px;
+    /* padding: 20px;  */
+    width: 150vw;
     /* display: grid; */
     display: flex;
     flex-direction: wrap;
@@ -26,7 +26,7 @@ body, html {
   .photo-gallery .photo-container {
     background-color: #f8f8f8; 
     border-radius: 4px; 
-    padding: 10px; 
+    /* padding: 10px;  */
     /* display: flex;  */
     height: 200px; 
     /* overflow: hidden;  */
