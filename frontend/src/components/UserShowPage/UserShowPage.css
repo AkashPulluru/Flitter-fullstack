@@ -45,7 +45,22 @@ body, html {
     padding: 0;
     background-color: #fff; 
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* background-color: #fff; */
   }
+
+  .banner {
+    width: 1950px; /* Full width */
+    height: 10px;
+    /* justify-content: start; */
+    /* overflow: hidden; Ensures the image doesn't overflow */
+  }
+  
+  .banner img {
+    width: 100%; /* Stretch the image to cover the full width */
+    height: auto; /* Keep image aspect ratio */
+    display: block; /* Remove any extra space below the image */
+  }
+  
   
   /* .user-show-container {
     max-width: 1200px;

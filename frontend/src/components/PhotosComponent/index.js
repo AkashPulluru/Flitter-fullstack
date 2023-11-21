@@ -9,7 +9,7 @@ const PhotosComponent = () => {
 
   useEffect(() => {
     if (user) {
-      debugger
+      // debugger
       fetchUserPhotos(user.id);
       fetchUserAlbums(user.id);
     }

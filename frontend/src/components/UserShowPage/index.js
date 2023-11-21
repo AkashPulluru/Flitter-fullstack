@@ -25,13 +25,16 @@ function UserShowPage() {
   })));
 
   const user = useSelector(state => state.session.user);
-  debugger
+//   debugger
 
 
   return (
     <>
     <div className="header">
         <div className="header-logo">Flittr</div>
+      </div>
+      <div className="banner">
+        <img src="https://flitter-fullstack-seeds.s3.amazonaws.com/leaves.jpg" alt="Banner" />
       </div>
       <div className="user-show-container">
         <div className="user-show-content">
@@ -51,3 +54,5 @@ function UserShowPage() {
 }
 
 export default UserShowPage;
+
+

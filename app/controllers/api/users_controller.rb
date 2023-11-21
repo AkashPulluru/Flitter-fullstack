@@ -26,7 +26,7 @@ class Api::UsersController < ApplicationController
 
 
 
-    
+
     @user = User.new(user_params)
     
 
@@ -44,9 +44,24 @@ class Api::UsersController < ApplicationController
 
   # DELETE /users/1
   # DELETE /users/1.json
-  def destroy
-    @user.destroy!
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      render :show, status: :ok
+    else
+      render json: @user.errors, status: :unprocessable_entity
+    end
   end
+
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    head :no_content
+  end
+
+  # def destroy
+  #   @user.destroy!
+  # end
 
   private
     # def set_user
