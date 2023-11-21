@@ -32,10 +32,12 @@ function UserShowPage() {
     <>
     <div className="header">
         <div className="header-logo">Flittr</div>
+        
       </div>
       <div className="banner">
-        <img src="https://flitter-fullstack-seeds.s3.amazonaws.com/leaves.jpg" alt="Banner" />
+        
       </div>
+      <img src="https://flitter-fullstack-seeds.s3.amazonaws.com/leaves.jpg" alt="Banner" />
       <div className="user-show-container">
         <div className="user-show-content">
             <h1>Bio: {user.bio}</h1>
