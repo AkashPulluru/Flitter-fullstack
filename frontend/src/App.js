@@ -7,8 +7,19 @@ import Navigation from './components/Navigation';
 import PhotosComponent from './components/PhotosComponent';
 import UserShowPage from './components/UserShowPage';
 import PhotoDetailPage from './components/PhotoDetailPage';
+import Form from './Form';
+import { useState } from 'react';
+import { useEffect } from 'react';
+
 
 function App() {
+  const [newPost, setNewPost] = useState(null);
+
+  // useEffect(() => {
+  //   if (newPost)
+  //     setPosts(prevPosts => [newPost, ...prevPosts])
+  // }, [newPost])
+
   return (
     <>
       <Navigation /> 
@@ -19,14 +30,14 @@ function App() {
         <Route path="/signup">
           <SignupFormPage />
         </Route>
-        
         <Route path="/users/:id" component={UserShowPage} />
-        <Route path="/photos">
+        {/* <Route path="/photos">
           <PhotosComponent />
-        </Route>
-        <Route path="/user/:userId" component={UserShowPage} />
-        <Route path="/photo/:id" component={PhotoDetailPage} />
+        </Route> */}
+        <Route path="/photos/:id" component={PhotoDetailPage} />
       </Switch>
+      <Form setNewPost={setNewPost} />
+      {/* <PostIndex posts={posts} /> */}
     </>
   );
 }

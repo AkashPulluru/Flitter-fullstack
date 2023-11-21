@@ -1,6 +1,7 @@
 class Api::AlbumsController < ApplicationController
     before_action :set_album, only: [:show, :update, :destroy]
-  
+    wrap_parameters include: Album.attribute_names + [:photo], format: :multipart_form
+
     # GET /api/albums/:id
     def show
       @album = Album.find(params[:id])

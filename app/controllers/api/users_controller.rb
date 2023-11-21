@@ -1,7 +1,7 @@
 class Api::UsersController < ApplicationController
     # before_action :set_user, only: [:show, :update, :destroy ]
 
-  # wrap_parameters include: User.attribute_names + ['password']
+  wrap_parameters include: User.attribute_names + ['password']
 
   # GET /users
   # GET /users.json

@@ -1,10 +1,10 @@
 class Api::PhotosController < ApplicationController
     before_action :set_photo, only: [:show, :update, :destroy]
-  
+    wrap_parameters include: Photo.attribute_names + [:photo], format: :multipart_form
     # GET /api/photos/:id
     def show
       @photo = Photo.find(params[:id])
-      debugger 
+      # debugger 
       render :show
     end
     
