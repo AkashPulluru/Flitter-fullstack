@@ -14,7 +14,7 @@ const LogoutButton = () => {
 
   return (
     <div className="dropdown">
-      <img src="./assets/camera.png"  alt="" className="dropdown-icon"/>
+      <img src="https://flitter-fullstack-seeds.s3.amazonaws.com/camera.png"  alt="" className="dropdown-icon"/>
       <div className="dropdown-content">
         <button onClick={handleLogout} className="logout-btn">Logout</button>
       </div>

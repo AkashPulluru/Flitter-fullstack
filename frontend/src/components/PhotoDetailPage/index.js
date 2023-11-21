@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import './PhotoDetailPage.css'; 
+
 
 function PhotoDetailPage() {
   const [photo, setPhoto] = useState(null);
@@ -25,10 +27,15 @@ function PhotoDetailPage() {
   };
 
   return (
-    <div>
-      <h1>{photo?.title} test</h1>
-      <img src={photo?.url} alt={photo?.title} />
+    <>
+    <div className="header">
+    <div className="header-logo">Flittr</div>
     </div>
+    <h1>{photo?.title}</h1>
+    <div className="photo-detail-page">
+    <img src={photo?.url} alt={photo?.title} />
+    </div>
+    </>
   );
 }
 
