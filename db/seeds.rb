@@ -11,19 +11,16 @@
 ## destroy tables in order of dependencies - 
 
 ApplicationRecord.transaction do 
-    puts "Destroying tables..."
-    AlbumPhoto.destroy_all
-    Album.destroy_all 
-    Photo.destroy_all
+  puts "Destroying tables..."
+  AlbumPhoto.destroy_all
+  Album.destroy_all 
+  Photo.destroy_all
+  User.destroy_all
 
-    User.destroy_all
+  puts "Resetting primary keys..."
   
-    puts "Resetting primary keys..."
-    
-    ApplicationRecord.connection.reset_pk_sequence!('users')
-  
-    puts "Creating users..."
-
+  ApplicationRecord.connection.reset_pk_sequence!('users')
+  ApplicationRecord.connection.reset_pk_sequence!('photos')
 
 User.create!(
   email: 'user1@example.com',
@@ -70,7 +67,7 @@ user3 = User.create!(
   password: 'password5',
   first_name: 'Eva',
   last_name: 'Brown',
-  bio: 'Full-stack developer',``
+  bio: 'Full-stack developer',
   website: 'https://www.example.com/user5'
 
 )
@@ -102,8 +99,7 @@ photo1_8 = Photo.create!(user_id: user3.id, title: "Photo Title 1-8", descriptio
 AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_1.id)
 AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_2.id)
 AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_3.id)
-798';0
-puts "Done!"
-end
 
-/.../
+puts "Done!"
+
+end

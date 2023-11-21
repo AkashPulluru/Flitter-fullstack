@@ -49,16 +49,16 @@ body, html {
   }
 
   .banner {
-    width: 1950px; /* Full width */
+    width: 1950px; 
     height: 10px;
     /* justify-content: start; */
-    /* overflow: hidden; Ensures the image doesn't overflow */
+    /* overflow: hidden;  */
   }
   
   .banner img {
-    width: 100%; /* Stretch the image to cover the full width */
-    height: auto; /* Keep image aspect ratio */
-    display: block; /* Remove any extra space below the image */
+    width: 100%; 
+    height: auto; 
+    display: block; 
   }
   
   

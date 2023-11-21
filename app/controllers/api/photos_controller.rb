@@ -4,11 +4,12 @@ class Api::PhotosController < ApplicationController
     # GET /api/photos/:id
     def show
       @photo = Photo.find(params[:id])
+      debugger 
       render :show
     end
     
     def index
-      # debugger
+      debugger
       if params[:user_id]
         @photos = Photo.where(user_id: params[:user_id])
       else

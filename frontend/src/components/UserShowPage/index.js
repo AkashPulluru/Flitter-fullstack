@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import './UserShowPage.css';
+import { useHistory } from 'react-router-dom'; 
 
 function UserShowPage() {
 
@@ -27,6 +28,12 @@ function UserShowPage() {
   const user = useSelector(state => state.session.user);
 //   debugger
 
+const history = useHistory();
+
+const handlePhotoClick = (photoId) => {
+  history.push(`/photos/${photoId}`); 
+};
+
 
   return (
     <>
@@ -35,20 +42,22 @@ function UserShowPage() {
         
       </div>
       <div className="banner">
-        
       </div>
-      <img src="https://flitter-fullstack-seeds.s3.amazonaws.com/leaves.jpg" alt="Banner" />
       <div className="user-show-container">
         <div className="user-show-content">
             <h1>Bio: {user.bio}</h1>
             <h2>Photostream</h2>
-          <div className="photo-gallery">
-            {photos.map((photo) => (
-              <div className="photo-container" key={photo.id}>
-                <img src={photo.url} alt={photo.title} />
-              </div>
-            ))}
-          </div>
+            <div className="photo-gallery">
+      {photos.map((photo) => (
+        <div 
+          className="photo-container" 
+          key={photo.id}
+          onClick={() => handlePhotoClick(photo.id)} 
+        >
+          <img src={photo.url} alt={photo.title} />
+        </div>
+      ))}
+    </div>
         </div>
       </div>
     </>

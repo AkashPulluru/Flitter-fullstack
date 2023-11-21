@@ -50,7 +50,7 @@ function LoginFormPage() {
         <ul>
           {errors.map((error, idx) => <li key={idx}>{error}</li>)}
         </ul>
-          <input
+          <input  
             type="text"
             value={email}
             placeholder="Email address"
