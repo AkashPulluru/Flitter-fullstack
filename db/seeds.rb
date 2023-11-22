@@ -27,7 +27,7 @@ User.create!(
   password: 'password1',
   first_name: 'John',
   last_name: 'Doe',
-  bio: 'I love coding!',
+  bio: 'I love coding and taking pictures! If you want to know more, I would love to connnect',
   website: 'https://www.example.com/user1'
 
 )
@@ -67,7 +67,7 @@ user3 = User.create!(
   password: 'password5',
   first_name: 'Eva',
   last_name: 'Brown',
-  bio: 'Full-stack developer',
+  bio: 'I am a full-stack developer based out of Chicago.',
   website: 'https://www.example.com/user5'
 
 )

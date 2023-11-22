@@ -67,6 +67,7 @@ body, html {
     max-width: 1200px;
     justify-content: center;
     align-items: center;
+    padding: 120px;
     /* margin: 20px auto;  */
     /* padding: 20px; */
     /* background-color: #fff;  */
@@ -79,8 +80,24 @@ body, html {
     padding: 20px; 
     background-color: #fff; 
     justify-content: center;
-
+    margin-left: 100px;
   } 
+
+  .user-show-content h2 {
+    text-align: center;
+    color: darkblue;
+    margin-left: 300px;
+    padding: 50px;
+  }
+
+  .user-show-content h1 {
+    text-align: center;
+    margin-top: 10px;  
+    margin-left: 300px;
+    padding: 50px;
+    /* background-color: #fff;
+    opacity: 0.9; */
+  }
   
   .photo-gallery .photo-container {
     background-color: #f8f8f8; 

@@ -45,8 +45,7 @@ const handlePhotoClick = (photoId) => {
       </div>
       <div className="user-show-container">
         <div className="user-show-content">
-            <h1>{user?.first_name} {user?.last_name}</h1>
-            <h1>{user?.bio}</h1>
+            <h1>About Me: {user?.bio} You can contact me at {user?.email} </h1>
             <h2>Photostream</h2>
             <div className="photo-gallery">
       {photos.map((photo) => (
