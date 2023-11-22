@@ -1,22 +1,23 @@
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #fff; 
+    /* background-color: #fff;  */
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     justify-content: center;
   }
   
   .user-show-container {
     max-width: 1200px;
-    margin: 20px auto; 
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    margin: 50px; 
+    /* align-items: center; */
+    /* padding: 20px; */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1);  */
   } 
   
   .photo-gallery {
     display: grid;
     gap: 30px;
-    padding: 20px; 
+    /* padding: 20px;  */
     width: 150vw;
     display: grid;
     display: flex;
@@ -24,12 +25,12 @@ body, html {
   }
   
   .photo-gallery .photo-container {
-    background-color: #f8f8f8; 
+    /* background-color: #f8f8f8;  */
     border-radius: 4px; 
-    padding: 10px;  
+    /* padding: 10px;   */
     display: flex; 
     height: 200px; 
-    overflow: hidden; 
+    /* overflow: hidden;  */
   }
   
   .photo-gallery img {
@@ -37,15 +38,15 @@ body, html {
     max-height: 100%; 
     display: block; 
     border-radius: 4px; 
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
+    /* box-shadow: 0 1px 3px rgba(0,0,0,0.1);  */
   }
 
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #fff; 
+    /* background-color: #fff;  */
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    background-color: #fff;
+    /* background-color: #fff; */
   }
 
   .banner {
@@ -64,10 +65,12 @@ body, html {
   
   .user-show-container {
     max-width: 1200px;
-    margin: 20px auto; 
-    padding: 20px;
-    background-color: #fff; 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+    justify-content: center;
+    align-items: center;
+    /* margin: 20px auto;  */
+    /* padding: 20px; */
+    /* background-color: #fff;  */
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1);  */
   } */
   
   .photo-gallery {
@@ -75,6 +78,7 @@ body, html {
     gap: 20px;
     padding: 20px; 
     background-color: #fff; 
+    justify-content: center;
 
   } 
   
@@ -95,13 +99,13 @@ body, html {
     box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
   }
   
-  .clearfix::after {
+  /* .clearfix::after {
     content: "";
     display: table;
     clear: both;
-  }
+  } */
   
-  .header {
+  /* .header {
     width: 100%;
     background-color: black;
     padding: 10px 0;
@@ -121,7 +125,7 @@ body, html {
     content: "";
     display: table;
     clear: both;
-  }
+  } */
   
   .header {
     width: 100%;

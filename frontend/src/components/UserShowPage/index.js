@@ -45,7 +45,7 @@ const handlePhotoClick = (photoId) => {
       </div>
       <div className="user-show-container">
         <div className="user-show-content">
-            <h1>Bio: {user.bio}</h1>
+            <h1>Bio: {user?.bio}</h1>
             <h2>Photostream</h2>
             <div className="photo-gallery">
       {photos.map((photo) => (
