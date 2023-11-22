@@ -17,7 +17,7 @@ function SignupFormPage() {
   const [errors, setErrors] = useState([]);
 
   useEffect(() => {
-    if (sessionUser) history.push('/photos'); 
+    if (sessionUser) history.push(`/users/${sessionUser.id}`); 
   }, [sessionUser, history]);
 
   const handleChange = (e) => {
