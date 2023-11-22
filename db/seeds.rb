@@ -100,6 +100,12 @@ AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_1.id)
 AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_2.id)
 AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_3.id)
 
+Comment.create!(photo_id: photo1_1.id, user_id: user1.id, comment_text: "Love this photo!")
+Comment.create!(photo_id: photo1_2.id, user_id: user2.id, comment_text: "Amazing shot!")
+Comment.create!(photo_id: photo1_3.id, user_id: user3.id, comment_text: "Great capture!")
+Comment.create!(photo_id: photo1_4.id, user_id: user3.id, comment_text: "Stunning view!")
+Comment.create!(photo_id: photo1_5.id, user_id: user2.id, comment_text: "Beautiful colors in this one.")
+
 puts "Done!"
 
 end

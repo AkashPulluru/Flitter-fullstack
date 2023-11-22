@@ -3,9 +3,14 @@ class Api::CommentsController < ApplicationController
 
         # GET /api/comments
         def index
-            @comments = Comment.all
+            if params[:photo_id]
+              @comments = Comment.where(photo_id: params[:photo_id])
+            else
+              @comments = Comment.all
+            end
             render json: @comments
           end
+          
       
           # POST /api/comments
           def create
@@ -45,5 +50,5 @@ class Api::CommentsController < ApplicationController
             def comment_params
               params.require(:comment).permit(:photo_id, :user_id, :comment_text, :comment_date)
             end
-        end
+        
 end

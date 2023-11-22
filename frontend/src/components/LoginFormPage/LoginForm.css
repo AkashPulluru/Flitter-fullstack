@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   padding: 0;
   background-image: url('./assets/flittr\ background.jpg');
@@ -8,13 +8,15 @@ body {
   align-items: center;
   height: 100vh;
   font-family: Arial, sans-serif;
-}
+} */
 
-.header {
+
+/* .header {
   width: 100%;
   background-color: black;
   padding: 10px 0;
   position: absolute;
+  height: 100px;
   top: 0;
   left: 0;
 }
@@ -47,7 +49,7 @@ form {
 form label {
   display: block;
   margin-bottom: 0.5em;
-}
+} 
 
 form input {
   width: 100%;
@@ -96,11 +98,11 @@ ul {
   width: 40px; 
   height: 40px; 
   cursor: pointer;
-}
+} 
 
 .dropdown-content {
   display: none;
-  /* position: absolute; */
+  position: absolute;
   right: 0;
   background-color: #f9f9f9;
   min-width: 160px;
@@ -110,7 +112,7 @@ ul {
 
 .dropdown:hover .dropdown-content {
   display: block;
-}
+} 
 
 .logout-btn {
   background-color: black;
@@ -133,5 +135,5 @@ nav {
 
 form button.demo-user {
   background-color: #4CAF50; 
-}
+}  */
 

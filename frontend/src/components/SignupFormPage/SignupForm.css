@@ -1,11 +1,11 @@
-body {
+/* body {
   margin: 0;
-  padding: 0;
-  /* background-image: url('./assets/flittr\ background.jpg'); */
+  padding: 0; 
+  background-image: url('./assets/flittr\ background.jpg');
   background-size: cover;
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
+  justify-content: center; 
+  align-items: center; 
   height: 100vh;
   font-family: Arial, sans-serif;
 }
@@ -21,9 +21,9 @@ body {
 
 .header-logo {
   color: white;
-  font-size: 24px; 
+  font-size: 80px; 
   text-align: left;
-  padding-left: 10px; 
+  padding-left: 50px; 
 }
 
 .form-title {
@@ -78,4 +78,4 @@ ul {
   padding-left: 0;
   list-style: none;
   margin-bottom: 20px;
-}
+} */

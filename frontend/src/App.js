@@ -7,7 +7,7 @@ import Navigation from './components/Navigation';
 import PhotosComponent from './components/PhotosComponent';
 import UserShowPage from './components/UserShowPage';
 import PhotoDetailPage from './components/PhotoDetailPage';
-import Form from './Form';
+// import Form from './Form';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -36,7 +36,7 @@ function App() {
         </Route> */}
         <Route path="/photos/:id" component={PhotoDetailPage} />
       </Switch>
-      <Form setNewPost={setNewPost} />
+      {/* <Form setNewPost={setNewPost} /> */}
       {/* <PostIndex posts={posts} /> */}
     </>
   );
