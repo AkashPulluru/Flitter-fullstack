@@ -1,15 +1,16 @@
- .photo-detail-container {
+.photo-detail-container {
   display: flex; 
   justify-content: center; 
-  align-items: start; 
-  gap: 20px; 
+  align-items: flex-start; 
+  gap: 40px;
   margin: 20px;
+  margin-top: 50px;
 }
 
 .photo-detail-page {
   flex: 1;
-  text-align: center;
-  background: none; 
+  text-align: left; /* Changed alignment */
+  /* background-color: lightgray;  */
 }
 
 .photo-detail-page img {
@@ -18,8 +19,25 @@
   max-height: 600px; 
 }
 
+.photo-detail-page h1 {
+  margin-left: 0; /* Align title */
+}
+
 .photo-comments {
   flex: 1;
-  background-color: white;
+  background-color: lightgray; /* Changed background color */
   max-width: 300px; 
-} 
+  padding: 20px; /* Added padding */
+  margin-top: 75px;
+}
+
+.photo-comments h2 {
+  margin-bottom: 20px; /* Spacing for comments heading */
+}
+
+.comment {
+  margin-bottom: 20px; /* Space between comments */
+  padding: 10px; /* Add padding for visual separation */
+  background-color: #f0f0f0; /* Optional: add a background color */
+  border-radius: 5px; /* Optional: round corners */
+}

@@ -3,7 +3,6 @@ import { useParams } from 'react-router-dom';
 import CommentList from '../CommentList'; 
 import './PhotoDetailPage.css'; 
 
-
 function PhotoDetailPage() {
   const [photo, setPhoto] = useState(null);
   const { id } = useParams(); 
@@ -31,12 +30,13 @@ function PhotoDetailPage() {
       <div className="header">
         <div className="header-logo">Flittr</div>
       </div>
-      <h1>{photo?.title}</h1>
       <div className="photo-detail-container">
         <div className="photo-detail-page">
+          <h1>{photo?.title}</h1>
           <img src={photo?.url} alt={photo?.title} />
         </div>
         <div className="photo-comments">
+          <h2>Comments</h2>
           <CommentList photoId={id} />
         </div>
       </div>
