@@ -87,14 +87,14 @@ album1 = Album.create!(user_id: user3.id, title: "Album Title 1", description: "
 album2 = Album.create!(user_id: user3.id, title: "Album Title 2", description: "Album 2 Description")
 album3 = Album.create!(user_id: user3.id, title: "Album Title 3", description: "Album 3 Description")
 
-photo1_1 = Photo.create!(user_id: user1.id, title: "Photo Title 1-1", description: "Description 1-1", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/coffee.jpg")
-photo1_2 = Photo.create!(user_id: user1.id, title: "Photo Title 1-2", description: "Description 1-2", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/fish.jpg")
-photo1_3 = Photo.create!(user_id: user1.id, title: "Photo Title 1-3", description: "Description 1-3", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/gas-station.jpg")
-photo1_4 = Photo.create!(user_id: user1.id, title: "Photo Title 1-4", description: "Description 1-4", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/car.jpg")
-photo1_5 = Photo.create!(user_id: user2.id, title: "Photo Title 1-5", description: "Description 1-5", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/leaves.jpg")
-photo1_6 = Photo.create!(user_id: user3.id, title: "Photo Title 1-6", description: "Description 1-6", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/path.jpg")
-photo1_7 = Photo.create!(user_id: user3.id, title: "Photo Title 1-7", description: "Description 1-7", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/trees.jpg")
-photo1_8 = Photo.create!(user_id: user3.id, title: "Photo Title 1-8", description: "Description 1-8", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/waterfalls.jpg")
+photo1_1 = Photo.create!(user_id: user1.id, title: "Midday Coffee", description: "Description 1-1", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/coffee.jpg")
+photo1_2 = Photo.create!(user_id: user1.id, title: "Fish at Peace", description: "Description 1-2", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/fish.jpg")
+photo1_3 = Photo.create!(user_id: user1.id, title: "Slices of Life", description: "Description 1-3", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/gas-station.jpg")
+photo1_4 = Photo.create!(user_id: user1.id, title: "On the Road", description: "Description 1-4", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/car.jpg")
+photo1_5 = Photo.create!(user_id: user2.id, title: "Nature, Untouched", description: "Description 1-5", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/leaves.jpg")
+photo1_6 = Photo.create!(user_id: user3.id, title: "My Path Diverged", description: "Description 1-6", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/path.jpg")
+photo1_7 = Photo.create!(user_id: user3.id, title: "Woodland Wonder", description: "Description 1-7", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/trees.jpg")
+photo1_8 = Photo.create!(user_id: user3.id, title: "Water at Work", description: "Description 1-8", url: "https://flitter-fullstack-seeds.s3.amazonaws.com/waterfalls.jpg")
 
 AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_1.id)
 AlbumPhoto.create!(album_id: album1.id, photo_id: photo1_2.id)
@@ -105,6 +105,8 @@ Comment.create!(photo_id: photo1_2.id, user_id: user2.id, comment_text: "Amazing
 Comment.create!(photo_id: photo1_3.id, user_id: user3.id, comment_text: "Great capture!")
 Comment.create!(photo_id: photo1_4.id, user_id: user3.id, comment_text: "Stunning view!")
 Comment.create!(photo_id: photo1_5.id, user_id: user2.id, comment_text: "Beautiful colors in this one.")
+Comment.create!(photo_id: photo1_2.id, user_id: user3.id, comment_text: "This is one of my favorites!")
+Comment.create!(photo_id: photo1_3.id, user_id: user1.id, comment_text: "What type of camera did they use?")
 
 puts "Done!"
 
