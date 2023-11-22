@@ -1,7 +1,6 @@
-/* body {
+body {
   margin: 0;
   padding: 0; 
-  background-image: url('./assets/flittr\ background.jpg');
   background-size: cover;
   display: flex;
   justify-content: center; 
@@ -78,4 +77,4 @@ ul {
   padding-left: 0;
   list-style: none;
   margin-bottom: 20px;
-} */
+}

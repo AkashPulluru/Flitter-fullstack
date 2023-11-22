@@ -1,4 +1,4 @@
-/* body, html {
+body, html {
     margin: 0;
     padding: 0;
     background-color: #fff; 
@@ -70,15 +70,15 @@ body, html {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
   } */
   
-  /* .photo-gallery {
+  .photo-gallery {
     display: grid;
     gap: 20px;
     padding: 20px; 
     background-color: #fff; 
 
-  } */
+  } 
   
-  /* .photo-gallery .photo-container {
+  .photo-gallery .photo-container {
     background-color: #f8f8f8; 
     border-radius: 4px; 
     padding: 10px; 
@@ -93,37 +93,15 @@ body, html {
     display: block; 
     border-radius: 4px; 
     box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
-  } */
-  
-  /* .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  } */
-  
-  /* .header {
-    width: 100%;
-    background-color: black;
-    padding: 10px 0;
-    position: absolute;
-    top: 0;
-    left: 0;
   }
   
-  .header-logo {
-    color: white;
-    font-size: 24px; 
-    text-align: left;
-    padding-left: 10px; 
-  } */
-  
-  /* .clearfix::after {
+  .clearfix::after {
     content: "";
     display: table;
     clear: both;
-  } */
+  }
   
-  /* .header {
+  .header {
     width: 100%;
     background-color: black;
     padding: 10px 0;
@@ -138,4 +116,25 @@ body, html {
     text-align: left;
     padding-left: 10px; 
   }
-   */
+  
+  .clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .header {
+    width: 100%;
+    background-color: black;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .header-logo {
+    color: white;
+    font-size: 24px; 
+    text-align: left;
+    padding-left: 10px; 
+  }

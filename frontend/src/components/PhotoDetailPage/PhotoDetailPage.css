@@ -1,4 +1,4 @@
- /* .photo-detail-container {
+ .photo-detail-container {
   display: flex; 
   justify-content: center; 
   align-items: start; 
@@ -22,4 +22,4 @@
   flex: 1;
   background-color: white;
   max-width: 300px; 
-}  */
+} 
